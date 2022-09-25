@@ -1,0 +1,145 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #fafafa;
+  color: #212121;
+  line-height: 1.5;
+  position: relative;
+}
+
+.wrap {
+  position: fixed;
+  z-index: 9;
+  top: 0;
+
+  width: 100%;
+  height: 65px;
+  background: rgb(27, 65, 148);
+  padding-top: 15px;
+  padding-bottom: 15px;
+  box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2),
+    0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+}
+
+.search-form {
+  margin-left: auto;
+  margin-right: auto;
+  width: 400px;
+  height: 40px;
+  position: relative;
+}
+
+.search-form input {
+  position: absolute;
+
+  width: 360px;
+  border: none;
+  padding: 5px;
+  height: 36px;
+  border-radius: 5px 0 0 5px;
+
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1),
+    inset 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.search-form input:focus {
+  outline: none;
+}
+
+.search-form button {
+  position: absolute;
+  right: 0;
+
+  width: 40px;
+  height: 36px;
+  border: none;
+
+  background: #e9e9e9;
+
+  background-image: url('/src/images/search.svg');
+  background-repeat: no-repeat;
+  background-size: 50%;
+  background-position: 50%;
+
+  text-align: center;
+  color: #0c0a0a;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.search-form button:hover,
+.search-form button:focus {
+  box-shadow: inset -6px -5px 13px -12px #ff2144;
+}
+
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+.gallery {
+  margin-top: 65px;
+  padding: 20px;
+  display: flex;
+  gap: 15px;
+
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.photo-card {
+  border: 1px solid #eee;
+  border-radius: 5px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+img {
+  width: 420px;
+  height: 270px;
+  object-fit: cover;
+}
+
+.info {
+  display: flex;
+  justify-content: space-around;
+}
+
+.info-item {
+  margin: 5px;
+  text-align: center;
+}
+
+.load-more {
+  cursor: pointer;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+  display: none;
+  border: none;
+  width: 100px;
+  height: 40px;
+  border-radius: 5px;
+  color: #fafafa;
+  background-color: rgb(27, 65, 148);
+}
+
+.load-more:hover,
+.load-more:focus {
+  background-color: rgb(41, 86, 184);
+}
+
+.show {
+  display: block;
+}
